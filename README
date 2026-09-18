@@ -1,0 +1,105 @@
+E-Commerce Data Cleaning & Preparation
+A practical data cleaning and preparation project using PostgreSQL and SQL on a relational e-commerce dataset. The project demonstrates how raw business data can be inspected, validated, standardized, and prepared for downstream analytics.
+
+Project Objective
+The objective is to identify common data-quality issues in raw e-commerce data and produce reliable datasets ready for SQL analysis, exploratory analysis, and BI dashboards.
+
+Dataset Overview
+The project contains 7 related datasets:
+
+Table                 Description
+
+Customers       Customer identifiers and location
+
+Orders          Order details, status, and dates
+
+Order Items     Products and sellers associated with orders
+
+Payments        Payment methods, installments, and values
+
+Reviews         Customer ratings and review information
+
+Products        Product attributes and categories
+
+Sellers         Seller identifiers and location
+
+Data Quality Checks    
+*The cleaning process focuses on five key areas:
+*Missing values — identify NULL and empty values in important fields
+*Duplicate records — detect repeated business records using relevant identifiers
+*Incorrect data types — validate and convert dates and numeric fields
+*Inconsistent values — standardize text such as cities, states, statuses, and payment types
+*Invalid values — validate business rules such as review scores and non-negative monetary values
+
+Cleaning Methodology
+The PostgreSQL workflow follows:
+Raw Data → Data Profiling → Quality Checks → Cleaning & Standardization → Validation → Cleaned Data
+
+SQL functions and techniques include:
+TRIM()
+LOWER()
+UPPER()
+INITCAP()
+DISTINCT
+NULL checks
+Data type conversion
+Business-rule validation
+
+Repository Structure
+SWYNEX-Data-Cleaning-Preparation/
+│
+├── data/
+│   ├── raw/
+│   │   ├── customers_raw.csv
+│   │   ├── orders_raw.csv
+│   │   ├── order_items_raw.csv
+│   │   ├── payments_raw.csv
+│   │   ├── reviews_raw.csv
+│   │   ├── products_raw.csv
+│   │   └── sellers_raw.csv
+│   │
+│   └── cleaned/
+│       ├── customers_cleaned.csv
+│       ├── orders_cleaned.csv
+│       ├── order_items_cleaned.csv
+│       ├── payments_cleaned.csv
+│       ├── reviews_cleaned.csv
+│       ├── products_cleaned.csv
+│       └── sellers_cleaned.csv
+│
+├── data_cleaning.sql
+├── data_cleaning_summary.csv
+└── README.md
+
+Validation
+*After cleaning, validation queries are used to confirm that:
+*Required identifiers are populated
+*Duplicate business records are controlled
+*Review scores are within the valid range of 1–5
+*Prices, freight values, and payment values are not negative
+*Dates and numeric fields use appropriate data types
+*Text categories are standardized
+
+Tools & Technologies
+PostgreSQL
+SQL
+CSV
+GitHub
+
+Project Outcome
+The cleaned datasets provide a structured foundation for:
+Exploratory Data Analysis (EDA)
+SQL business analysis
+Customer and sales analytics
+Power BI / Tableau dashboards
+Business reporting
+
+Skills Demonstrated
+SQL | PostgreSQL | Data Cleaning | Data Quality | Data Validation | Data Preparation | GitHub
+
+Dataset Source
+The dataset is based on the Brazilian E-Commerce Public Dataset by Olist.
+The raw files in this repository are prepared for demonstrating data-cleaning techniques. They should not be represented as untouched source files.
+
+Internship Context
+This project was completed as part of a SWYNEX Data Analyst Internship – Data Cleaning & Preparation task and is maintained as a portfolio project demonstrating practical data analytics skills.
