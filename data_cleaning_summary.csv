@@ -1,0 +1,8 @@
+table,raw_rows,cleaned_rows,rows_removed
+customers,302,300,2
+orders,602,600,2
+order_items,1000,1000,0
+payments,649,649,0
+reviews,452,452,0
+products,121,120,1
+sellers,60,60,0
